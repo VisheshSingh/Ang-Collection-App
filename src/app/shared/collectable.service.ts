@@ -10,10 +10,28 @@ export class CollectableService {
         {description: 'Intermediate level: HTML/CSS', type: 'Periodical'}
     ];
 
+    private collection: Collectable[] = [];
+
     getCollectables(){
         return this.collectables;
     }
 
+    getCollection(){
+        return this.collection;
+    }
+
+    addCollection(item: Collectable){
+        if(this.collection.indexOf(item) !== -1){
+            return;
+        }
+        this.collection.push(item);
+    }
+
+    removeCollection(item: Collectable){
+        this.collection.splice(this.collection.indexOf(item), 1);
+    }
+
   constructor() { }
+
 
 }
