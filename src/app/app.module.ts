@@ -6,7 +6,7 @@ import { MarketComponent } from './market/market.component';
 import { CollectionComponent } from './collection/collection.component';
 import { CollectableService } from './shared/collectable.service';
 import { NavComponent } from './nav.component';
-
+import { routing } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +15,8 @@ import { NavComponent } from './nav.component';
     NavComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [CollectableService],
   bootstrap: [AppComponent]
